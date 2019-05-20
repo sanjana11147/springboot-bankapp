@@ -28,7 +28,7 @@ public class CustomerMockedData {
         return customerlist;
     }
 
-    @Nullable
+
     public static Customer getCustomerById(int id){
         for(Customer x: customerlist){
             if(x.getId()==id){
@@ -51,8 +51,7 @@ public class CustomerMockedData {
     }
 
     public Customer createCustomer(int id, String name, String bank_name, String repayment_option){
-        Customer newCustomer;
-        newCustomer = new Customer();
+        Customer newCustomer = new Customer(id, name, bank_name, repayment_option);
         customerlist.add(newCustomer);
         return newCustomer;
     }
